@@ -43,4 +43,9 @@ jobs:
         run: terraform apply -auto-approve
         continue-on-error: true
         working-directory: ./dev-ecr
+      - name: Terraform Destro
+        id: Destroy
+        run: terraform destroy -auto-approve
+        continue-on-error: true
+        working-directory: ./dev-ecr
       
